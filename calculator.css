@@ -1,0 +1,99 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.calculator {
+	max-width: 400px;
+	padding: 20px;
+	margin: 0 auto;
+	background: #f2f2f2;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	margin-top: 40px;
+	/* height: 60vh;
+    justify-content: center;
+    align-items: center; */
+}
+
+.calculator #result {
+	width: 100%;
+	padding: 10px;
+	font-size: 24px;
+	border: none;
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px inset;
+	/* inset mean to help u push the shadow color inside  */
+	/* justify-content: center;
+    align-items: center;
+    margin:15px auto;
+    display: flex; */
+}
+
+.calculator .buttons {
+	/* the grid helps to set anything to row and take d same margin and padding, while the grid-template-columns help to repeat and set them to colums of equal sizes, that we set them to 4columns with equal sizes. fr means fraction. */
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 10px;
+	margin-top: 20px;
+	/* border: 2px solid blue;
+    width: 90%;
+    height: 48vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: wrap; */
+}
+
+.buttons button {
+	padding: 10px;
+	font-size: 24px;
+	border: none;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	/* flex-wrap: wrap;
+    flex: 1;
+    margin: 10px; */
+}
+
+.buttons button:hover {
+	background-color: #ddd;
+}
+
+.clear {
+	background-color: #ff4136;
+	color: #fff;
+}
+
+.number,
+.decimal {
+	background-color: #fff;
+	color: #333;
+}
+
+.operator {
+	background-color: #0074d9;
+	color: #fff;
+}
+
+.buttons .equals {
+	background-color: #01ff70;
+	/* span 3 means to expand rhe button by 3 */
+	grid-row: span 3;
+	color: #fff;
+}
+
+.buttons .delete {
+	color: white;
+	background-color: red;
+}
